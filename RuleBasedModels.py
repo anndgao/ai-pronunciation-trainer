@@ -11,6 +11,9 @@ def get_phonem_converter(language: str):
             epitran.Epitran('deu-Latn'))
     elif language == 'en':
         phonem_converter = EngPhonemConverter()
+    elif language == 'es':
+        phonem_converter = EpitranPhonemConverter(
+            epitran.Epitran('spa-Latn'))
     else:
         raise ValueError('Language not implemented')
 

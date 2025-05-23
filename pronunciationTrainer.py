@@ -15,10 +15,12 @@ import time
 def getTrainer(language: str):
 
     asr_model = mo.getASRModel(language,use_whisper=True)
-    
     if language == 'de':
         phonem_converter = RuleBasedModels.EpitranPhonemConverter(
             epitran.Epitran('deu-Latn'))
+    elif language == 'es':
+        phonem_converter = RuleBasedModels.EpitranPhonemConverter(
+            epitran.Epitran('spa-Latn'))
     elif language == 'en':
         phonem_converter = RuleBasedModels.EngPhonemConverter()
     else:

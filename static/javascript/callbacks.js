@@ -27,7 +27,7 @@ let wordCategories;
 let startTime, endTime;
 
 // API related variables 
-let AILanguage = "de"; // Standard is German
+let AILanguage = "es"; // Standard is German
 
 
 let STScoreAPIKey = 'rll5QsTiv83nti99BW6uCmvs9BDVxSB39SVFceYb'; // Public Key. If, for some reason, you would like a private one, send-me a message and we can discuss some possibilities
@@ -263,6 +263,12 @@ const changeLanguage = (language, generateNewSample = false) => {
 
             document.getElementById("languageBox").innerHTML = "English";
             languageIdentifier = 'en';
+            languageName = 'Daniel';
+            break;
+        case 'es':
+
+            document.getElementById("languageBox").innerHTML = "Spanish";
+            languageIdentifier = 'es';
             languageName = 'Daniel';
             break;
     };
